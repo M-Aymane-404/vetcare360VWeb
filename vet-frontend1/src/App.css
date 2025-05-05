@@ -1,0 +1,208 @@
+.App {
+  text-align: left;
+}
+
+/* Navbar styling - making it transparent and floating */
+.custom-navbar {
+  background-color: transparent !important; /* Force transparency */
+  padding: 1rem 0;
+  position: absolute; /* Position navbar over hero section */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure navbar stays on top */
+}
+
+/* Button styling in navbar */
+.nav-buttons .btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px; /* Rounded corners for buttons */
+}
+
+.nav-buttons .btn-primary {
+  background-color: #223755; /* Dark blue color for primary button */
+  border: none;
+}
+
+/* Hero section with gradient background */
+.hero-section {
+  background: linear-gradient(135deg, #8FD3C7 0%, #68b0c1 100%); /* Turquoise gradient */
+  padding: 4rem 0;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section h1 {
+  color: #335261;
+  font-size: 3.5rem;
+}
+
+.hero-section p {
+  color: #2C3E50;
+  font-size: 1.25rem;
+}
+
+.features-section {
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: #2C5282;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #2C3E50;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  display: block;
+}
+
+
+/* Update logo styling */
+.navbar-brand img {
+  width: 75px;  /* Logo size */
+  height: 75px; /* Maintain aspect ratio */
+  margin-right: 8px; /* Space between logo and text */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Vertically center logo with text */
+  font-size: 1.5rem;
+  font-weight: 500;
+  color : #223755;
+  ;
+}
+
+
+/* Footer styling */
+.footer {
+  background-color: #223755;
+  color: white;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 1rem;
+}
+
+.footer-section h4 {
+  color: #8FD3C7;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #8FD3C7;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Vet List Section Styling */
+.vet-list-section {
+  background: linear-gradient(135deg, #8FD3C7 0%, #68b0c1 100%);
+  padding: 5rem 0;
+  min-height: 100vh;
+}
+
+.vet-list-section h1 {
+  color: #223755;
+  margin-bottom: 2rem;
+}
+
+.vet-card {
+  background: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.vet-card:hover {
+  transform: translateY(-5px);
+}
+
+.vet-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.vet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vet-info h3 {
+  color: #223755;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.specialty-tag {
+  display: inline-block;
+  background: #e8f5f3;
+  color: #223755;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}

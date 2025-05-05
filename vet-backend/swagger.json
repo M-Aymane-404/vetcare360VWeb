@@ -1,0 +1,172 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "VetCare 360 API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/api/veterinarians": {
+      "get": {
+        "summary": "Liste des v\u00e9t\u00e9rinaires",
+        "responses": {
+          "200": {
+            "description": "Liste retourn\u00e9e avec succ\u00e8s"
+          }
+        }
+      }
+    },
+    "/api/owners": {
+      "get": {
+        "summary": "Liste des propri\u00e9taires",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cr\u00e9er un propri\u00e9taire",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "address": {
+                    "type": "string"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "telephone": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "firstName",
+                  "lastName",
+                  "telephone"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Propri\u00e9taire cr\u00e9\u00e9"
+          }
+        }
+      }
+    },
+    "/api/owners/search": {
+      "get": {
+        "summary": "Rechercher un propri\u00e9taire par nom",
+        "parameters": [
+          {
+            "name": "lastName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pets": {
+      "post": {
+        "summary": "Ajouter un animal",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "birthDate": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "owner": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "birthDate",
+                  "type",
+                  "owner"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Animal ajout\u00e9"
+          }
+        }
+      }
+    },
+    "/api/visits": {
+      "post": {
+        "summary": "Ajouter une visite",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "pet": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "date",
+                  "description",
+                  "pet"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Visite ajout\u00e9e"
+          }
+        }
+      }
+    }
+  }
+}

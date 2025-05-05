@@ -1,0 +1,8 @@
+{
+  "short_name": "VetCare 360",
+  "name": "VetCare 360 - Gestion de clinique vétérinaire",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#8FD3C7",
+  "background_color": "#ffffff"
+}
