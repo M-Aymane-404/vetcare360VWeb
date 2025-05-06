@@ -1,0 +1,111 @@
+.vets-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(31, 55, 111) 20%, rgb(76, 123, 195) 50%);
+  padding-top: 76px;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, rgb(31, 55, 111) 42%, rgba(41, 73, 150, 0.32) 90%);
+  padding: 4rem 0;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.vets-section {
+  min-height: 50vh;
+  padding: 2rem 0;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.vets-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.vets-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.vets-table thead th {
+  background: linear-gradient(135deg, rgb(31, 55, 111) 0%, rgb(76, 123, 195) 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: left;
+  position: sticky;
+  top: 0;
+}
+
+.vets-table tbody tr {
+  transition: background-color 0.3s ease;
+  height: 60px;
+}
+
+.vets-table tbody tr:hover {
+  background-color: rgba(31, 55, 111, 0.05);
+}
+
+.vet-name {
+  font-weight: 600;
+  color: rgb(31, 55, 111);
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.vet-specialties {
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+  }
+  
+  .vets-page {
+    padding-top: 66px;
+  }
+
+  .vets-table thead th,
+  .vets-table tbody td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+} 

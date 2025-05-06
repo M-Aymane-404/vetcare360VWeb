@@ -1,13 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import VetsList from './pages/VetsList';
+import NavbarComponent from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <Router>
+      <div className="App">
+        <NavbarComponent />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/vetlist" element={<VetsList />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
