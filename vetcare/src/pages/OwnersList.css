@@ -1,0 +1,144 @@
+.owners-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(31, 55, 111) 20%, rgb(76, 123, 195) 50%);
+  padding-top: 76px;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, rgb(31, 55, 111) 42%, rgba(41, 73, 150, 0.32) 90%);
+  padding: 4rem 0;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.owners-section {
+  min-height: 50vh;
+  padding: 2rem 0;
+}
+
+.search-container {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.owners-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.owners-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.owners-table thead th {
+  background: linear-gradient(135deg, rgb(31, 55, 111) 0%, rgb(76, 123, 195) 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: left;
+  position: sticky;
+  top: 0;
+}
+
+.owners-table tbody tr {
+  transition: background-color 0.3s ease;
+  height: 60px;
+}
+
+.owners-table tbody tr:hover {
+  background-color: rgba(31, 55, 111, 0.05);
+}
+
+.owner-name,
+.owner-firstname,
+.owner-city {
+  vertical-align: middle;
+  padding: 1rem;
+  color: rgb(31, 55, 111);
+}
+
+.owner-email {
+  vertical-align: middle;
+  padding: 1rem;
+  color: rgb(31, 55, 111);
+}
+
+.owner-actions {
+  vertical-align: middle;
+  padding: 1rem;
+  text-align: center;
+}
+
+.owner-actions .btn {
+  min-width: 80px;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.owner-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .owners-page {
+    padding-top: 66px;
+  }
+
+  .owners-table thead th,
+  .owners-table tbody td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .owner-actions .btn {
+    min-width: 60px;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem;
+  }
+} 

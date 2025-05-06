@@ -5,6 +5,7 @@ import VetsList from './pages/VetsList';
 import NavbarComponent from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import OwnersList from './pages/OwnersList';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/vetlist" element={<VetsList />} />
+          <Route path="/owners" element={<OwnersList />} />
         </Routes>
       </div>
     </Router>

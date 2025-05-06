@@ -137,7 +137,7 @@ const VetsList = () => {
                 </tr>
               </thead>
               <tbody>
-                {veterinarians.map((vet) => (
+            {veterinarians.map((vet) => (
                   <tr key={vet._id}>
                     <td className="vet-name">{vet.name}</td>
                     <td className="vet-specialties">
