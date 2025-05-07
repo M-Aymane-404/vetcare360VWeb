@@ -89,8 +89,7 @@ const OwnersList = () => {
   };
 
   const handleEdit = (ownerId) => {
-    // TODO: Implement edit functionality
-    console.log('Edit owner:', ownerId);
+    navigate(`/owners/edit/${ownerId}`);
   };
 
   const handleDetails = (ownerId) => {
