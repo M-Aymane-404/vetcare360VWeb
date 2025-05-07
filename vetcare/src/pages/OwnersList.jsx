@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Container, Table, Spinner, Alert, Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './OwnersList.css';
 
 const OwnersList = () => {
+  const navigate = useNavigate();
   const [owners, setOwners] = useState([]);
   const [filteredOwners, setFilteredOwners] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -208,15 +210,8 @@ const OwnersList = () => {
     <div className="owners-page">
       <section className="hero-section">
         <Container>
-          <div className="text-center">
-            <h1 className="text-white mb-4">Nos Propriétaires</h1>
-          </div>
-        </Container>
-      </section>
-
-      <section className="owners-section">
-        <Container>
-          <div className="search-container mb-4">
+          <h1 className="text-center text-white mb-4">Nos Propriétaires</h1>
+          <div className="search-actions-wrapper">
             <Form.Control
               type="text"
               placeholder="Rechercher par nom..."
@@ -224,8 +219,20 @@ const OwnersList = () => {
               onChange={handleSearch}
               className="search-input"
             />
+            <Button 
+              variant="success"
+              onClick={() => navigate('/owners/add')}
+              className="add-owner-btn"
+            >
+              <i className="fas fa-plus me-2"></i>
+              Ajouter un propriétaire
+            </Button>
           </div>
+        </Container>
+      </section>
 
+      <section className="owners-section">
+        <Container>
           <div className="table-container">
             <Table className="owners-table">
               <thead>
@@ -278,4 +285,4 @@ const OwnersList = () => {
   );
 };
 
-export default React.memo(OwnersList); 
+export default OwnersList;
