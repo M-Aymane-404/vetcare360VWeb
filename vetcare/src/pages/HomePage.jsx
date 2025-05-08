@@ -2,8 +2,11 @@ import React from 'react';
 import './HomePage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Nav, Navbar, Button, Row, Col, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="homepage" style={{ minHeight: '100vh', fontFamily: 'sans-serif', background: 'linear-gradient(135deg,rgb(31, 55, 111) 20%,rgb(76, 123, 195) 50%)' }}>
       {/* Navbar */}
@@ -41,11 +44,23 @@ const HomePage = () => {
                   comprehensive care with compassion and expertise.
                 </p>
                 <div className="hero-buttons d-flex" style={{marginTop: '2rem'}}>
-                  <Button variant="light" size="lg" className="d-flex flex-column align-items-center p-4 me-3" style={{minWidth: '180px', borderRadius: '20px'}}>
+                  <Button 
+                    variant="light" 
+                    size="lg" 
+                    className="d-flex flex-column align-items-center p-4 me-3" 
+                    style={{minWidth: '180px', borderRadius: '20px'}}
+                    onClick={() => navigate('/vetlist')}
+                  >
                     <i className="fas fa-stethoscope fa-2x mb-2"></i>
                     Vétérinaires
                   </Button>
-                  <Button variant="light" size="lg" className="d-flex flex-column align-items-center p-4" style={{minWidth: '180px', borderRadius: '20px'}}>
+                  <Button 
+                    variant="light" 
+                    size="lg" 
+                    className="d-flex flex-column align-items-center p-4" 
+                    style={{minWidth: '180px', borderRadius: '20px'}}
+                    onClick={() => navigate('/owners')}
+                  >
                     <i className="fas fa-user fa-2x mb-2"></i>
                     Propriétaires
                   </Button>

@@ -28,7 +28,12 @@ const EditPet = () => {
             birthDate: new Date(pet.birthDate).toISOString().split('T')[0],
             type: pet.type
           });
-          setOwnerId(pet.owner);
+          // Store the owner ID from the pet data
+          if (pet.owner && pet.owner._id) {
+            setOwnerId(pet.owner._id);
+          } else if (pet.owner) {
+            setOwnerId(pet.owner);
+          }
         }
       } catch (err) {
         setError('Erreur lors du chargement des informations de l\'animal');
@@ -53,14 +58,27 @@ const EditPet = () => {
       const response = await axios.put(`http://localhost:5000/api/pets/${id}`, formData);
       if (response.data.success) {
         setShowSuccess(true);
-        setTimeout(() => {
-          navigate(`/owners/${ownerId}`);
-        }, 2000);
+        // Use the stored ownerId for navigation
+        if (ownerId) {
+          setTimeout(() => {
+            navigate(`/owners/${ownerId}`);
+          }, 1000);
+        } else {
+          setError('ID du propriétaire manquant');
+        }
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Erreur lors de la modification de l\'animal');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleCancel = () => {
+    if (ownerId) {
+      navigate(`/owners/${ownerId}`);
+    } else {
+      setError('ID du propriétaire manquant');
     }
   };
 
@@ -119,7 +137,8 @@ const EditPet = () => {
             <div className="d-flex justify-content-end gap-2">
               <Button 
                 variant="secondary" 
-                onClick={() => navigate(`/owners/${ownerId}`)}
+                onClick={handleCancel}
+                disabled={loading}
               >
                 Annuler
               </Button>
