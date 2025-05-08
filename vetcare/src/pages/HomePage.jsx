@@ -26,7 +26,6 @@ const HomePage = () => {
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="/vetlist">Vétérinaires</Nav.Link>
               <Nav.Link href="/owners">Propriétaires</Nav.Link>
-              <Nav.Link href="#footer">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -38,10 +37,9 @@ const HomePage = () => {
           <Row className="align-items-center">
             <Col lg={6}>
               <div className="hero-content">
-                <h1 className="hero-title">Professional Care For Your Beloved Pets</h1>
+                <h1 className="hero-title">Soins Professionnels pour vos animaux de compagnie bien-aimés</h1>
                 <p className="hero-text">
-                  Trust us with your pet's health. Our experienced veterinarians provide
-                  comprehensive care with compassion and expertise.
+                Confiez-nous la santé de votre animal. Nos vétérinaires expérimentés prodiguent des soins complets avec compassion et expertise.
                 </p>
                 <div className="hero-buttons d-flex" style={{marginTop: '2rem'}}>
                   <Button 
@@ -132,26 +130,26 @@ const HomePage = () => {
           <Row>
             <Col md={3}>
               <div className="stat-item">
-                <div className="stat-number">50+</div>
-                <div className="stat-label">Animaux</div>
+                <div className="stat-number">100+</div>
+                <div className="stat-label">Clients satisfaits</div>
               </div>
             </Col>
             <Col md={3}>
               <div className="stat-item">
                 <div className="stat-number">15+</div>
-                <div className="stat-label">Expert Vets</div>
+                <div className="stat-label">Vétérinaires</div>
               </div>
             </Col>
             <Col md={3}>
               <div className="stat-item">
-                <div className="stat-number">10+</div>
-                <div className="stat-label">Years Experience</div>
+                <div className="stat-number">150+</div>
+                <div className="stat-label">Animaux heureux</div>
               </div>
             </Col>
             <Col md={3}>
               <div className="stat-item">
                 <div className="stat-number">24/7</div>
-                <div className="stat-label">Emergency Care</div>
+                <div className="stat-label">Urgence</div>
               </div>
             </Col>
           </Row>
