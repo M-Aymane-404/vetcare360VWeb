@@ -132,8 +132,8 @@ const HomePage = () => {
           <Row>
             <Col md={3}>
               <div className="stat-item">
-                <div className="stat-number">5000+</div>
-                <div className="stat-label">Happy Pets</div>
+                <div className="stat-number">50+</div>
+                <div className="stat-label">Animaux</div>
               </div>
             </Col>
             <Col md={3}>
@@ -166,4 +166,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage; 
+export default HomePage;

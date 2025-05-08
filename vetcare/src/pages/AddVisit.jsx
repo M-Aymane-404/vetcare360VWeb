@@ -64,15 +64,18 @@ const AddVisit = () => {
     <div className="owners-page">
       <Container className="py-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h1 className="text-white mb-0">Ajouter une Visite</h1>
-          <Button 
-            variant="outline-light" 
-            onClick={() => window.history.back()}
-            className="back-button"
-          >
-            <i className="fas fa-arrow-left me-2"></i>
-            Retour
-          </Button>
+          <div className="w-100 text-center position-relative">
+            <h1 className="text-white mb-0">Ajouter une Visite</h1>
+            <Button 
+              variant="outline-light" 
+              onClick={() => window.history.back()}
+              className="back-button position-absolute"
+              style={{ right: 0, top: '50%', transform: 'translateY(-50%)' }}
+            >
+              <i className="fas fa-arrow-left me-2"></i>
+              Retour
+            </Button>
+          </div>
         </div>
         
         <Row className="justify-content-center">
