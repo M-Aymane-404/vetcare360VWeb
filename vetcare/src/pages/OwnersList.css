@@ -349,11 +349,46 @@
 
 .pet-type {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
   font-size: 0.9rem;
-  background-color: rgba(31, 55, 111, 0.1);
-  color: rgb(31, 55, 111);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pet-type-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pet-type.dog {
+  background-color: rgba(76, 123, 195, 0.1);
+  color: rgb(76, 123, 195);
+}
+
+.pet-type.cat {
+  background-color: rgba(255, 107, 107, 0.1);
+  color: rgb(255, 107, 107);
+}
+
+.pet-type.bird {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: rgb(46, 204, 113);
+}
+
+.pet-type.hamster {
+  background-color: rgba(155, 89, 182, 0.1);
+  color: rgb(155, 89, 182);
+}
+
+.pet-type.lizard {
+  background-color: rgba(241, 196, 15, 0.1);
+  color: rgb(241, 196, 15);
+}
+
+.pet-type i {
+  font-size: 1.1rem;
 }
 
 .back-button {
