@@ -11,6 +11,7 @@ import EditOwner from './pages/EditOwner';
 import OwnerDetails from './pages/OwnerDetails';
 import AddPet from './pages/AddPet';
 import EditPet from './pages/EditPet';
+import AddVisit from './pages/AddVisit';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/owners/:id" element={<OwnerDetails />} />
           <Route path="/owners/:ownerId/pets/add" element={<AddPet />} />
           <Route path="/pets/:id/edit" element={<EditPet />} />
+          <Route path="/pets/:petId/visits/add" element={<AddVisit />} />
         </Routes>
       </div>
     </Router>

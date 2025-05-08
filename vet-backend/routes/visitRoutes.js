@@ -121,5 +121,46 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+// Supprimer une visite
+router.delete("/:id", 
+  [
+    param("id").isMongoId().withMessage("ID invalide")
+  ],
+  async (req, res, next) => {
+    try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({
+          success: false,
+          errors: errors.array().map(e => ({ champ: e.path, message: e.msg }))
+        });
+      }
+
+      // Trouver la visite
+      const visit = await Visit.findById(req.params.id);
+      if (!visit) {
+        return res.status(404).json({
+          success: false,
+          message: "Visite introuvable"
+        });
+      }
+
+      // Supprimer la référence de la visite dans l'animal
+      await Pet.findByIdAndUpdate(visit.pet, {
+        $pull: { visits: visit._id }
+      });
+
+      // Supprimer la visite
+      await Visit.findByIdAndDelete(req.params.id);
+
+      res.json({
+        success: true,
+        message: "Visite supprimée avec succès"
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+);
 
 module.exports = router;

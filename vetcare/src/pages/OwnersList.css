@@ -426,3 +426,63 @@
     margin-bottom: 0.25rem;
   }
 }
+
+/* Styles pour les cartes d'animaux */
+.pet-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.pet-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pet-card .card-header {
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+  border-bottom: 1px solid #e9ecef;
+}
+
+.pet-icon {
+  font-size: 1.2em;
+}
+
+.visits-table {
+  margin-top: 1rem;
+}
+
+.visits-table thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+}
+
+.visits-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.visits-table td {
+  vertical-align: middle;
+}
+
+/* Style pour le bouton de suppression dans la table des visites */
+.visits-table .btn-danger {
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
+
+.visits-table .btn-danger i {
+  font-size: 0.875rem;
+}
+
+/* Espacement entre les cartes d'animaux */
+.pets-list .pet-card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* Style pour le message "Aucune visite" */
+.alert-info {
+  background-color: #f8f9fa;
+  border-color: #e9ecef;
+  color: #6c757d;
+}
