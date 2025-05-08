@@ -8,6 +8,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import OwnersList from './pages/OwnersList';
 import AddOwner from './pages/AddOwner';
 import EditOwner from './pages/EditOwner';
+import OwnerDetails from './pages/OwnerDetails';
+import AddPet from './pages/AddPet';
+import EditPet from './pages/EditPet';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path="/owners" element={<OwnersList />} />
           <Route path="/owners/add" element={<AddOwner />} />
           <Route path="/owners/edit/:id" element={<EditOwner />} />
+          <Route path="/owners/:id" element={<OwnerDetails />} />
+          <Route path="/owners/:ownerId/pets/add" element={<AddPet />} />
+          <Route path="/pets/:id/edit" element={<EditPet />} />
         </Routes>
       </div>
     </Router>

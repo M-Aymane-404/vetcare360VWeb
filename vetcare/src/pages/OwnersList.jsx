@@ -93,8 +93,11 @@ const OwnersList = () => {
   };
 
   const handleDetails = (ownerId) => {
-    // TODO: Implement details functionality
-    console.log('View details for owner:', ownerId);
+    if (ownerId) {
+      navigate(`/owners/${ownerId}`);
+    } else {
+      console.error("ID du propriétaire manquant");
+    }
   };
 
   const handleDelete = async (ownerId) => {
