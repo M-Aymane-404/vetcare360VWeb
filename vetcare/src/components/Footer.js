@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: #1a2942;
+  background: linear-gradient(to right, rgb(31, 55, 111), rgb(76, 123, 195));
   color: white;
   padding: 2rem 0;
   margin-top: auto;

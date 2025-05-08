@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Nav, Navbar, Button, Row, Col, Card } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
@@ -37,9 +37,9 @@ const HomePage = () => {
           <Row className="align-items-center">
             <Col lg={6}>
               <div className="hero-content">
-                <h1 className="hero-title">Soins Professionnels pour vos animaux de compagnie bien-aimés</h1>
+                <h1 className="hero-title">VetCare360 : Système de gestion intégré pour cliniques vétérinaires</h1>
                 <p className="hero-text">
-                Confiez-nous la santé de votre animal. Nos vétérinaires expérimentés prodiguent des soins complets avec compassion et expertise.
+                Notre système permet un suivi précis des propriétaires, de leurs animaux de compagnie et de l'historique des consultations médicales, offrant aux professionnels vétérinaires un accès centralisé à toutes les informations essentielles pour une prise en charge optimale.
                 </p>
                 <div className="hero-buttons d-flex" style={{marginTop: '2rem'}}>
                   <Button 
@@ -76,88 +76,8 @@ const HomePage = () => {
         </Container>
       </section>
 
-      {/* Features Section */}
-      <section className="features-section">
-        <Container>
-          <h2 className="text-center section-title">Nos Services</h2>
-          <Row>
-            <Col md={4}>
-              <Card className="feature-card">
-                <div className="icon-wrapper">
-                  <i className="fas fa-stethoscope"></i>
-                </div>
-                <Card.Body>
-                  <Card.Title>Soins médicaux</Card.Title>
-                  <Card.Text>
-                  Examens et traitements médicaux complets pour tous types d'animaux de compagnie.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="feature-card">
-                <div className="icon-wrapper">
-                  <i className="fas fa-syringe"></i>
-                </div>
-                <Card.Body>
-                  <Card.Title>Vaccinations</Card.Title>
-                  <Card.Text>
-                  Gardez vos animaux de compagnie en bonne santé grâce à nos programmes de vaccination complets.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="feature-card">
-                <div className="icon-wrapper">
-                  <i className="fas fa-heart"></i>
-                </div>
-                <Card.Body>
-                  <Card.Title>Soins d'urgence</Card.Title>
-                  <Card.Text>
-                    24/7 services d'urgence lorsque vos animaux ont besoin de soins immédiats.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="stats-section"  style={{ background: 'linear-gradient(135deg,rgb(31, 55, 111) 51%,rgb(76, 123, 195) 99%)', color: 'white', textAlign: 'center', padding: '2rem 0', marginTop: '0' }}>
-        <Container>
-          <Row>
-            <Col md={3}>
-              <div className="stat-item">
-                <div className="stat-number">100+</div>
-                <div className="stat-label">Clients satisfaits</div>
-              </div>
-            </Col>
-            <Col md={3}>
-              <div className="stat-item">
-                <div className="stat-number">15+</div>
-                <div className="stat-label">Vétérinaires</div>
-              </div>
-            </Col>
-            <Col md={3}>
-              <div className="stat-item">
-                <div className="stat-number">150+</div>
-                <div className="stat-label">Animaux heureux</div>
-              </div>
-            </Col>
-            <Col md={3}>
-              <div className="stat-item">
-                <div className="stat-number">24/7</div>
-                <div className="stat-label">Urgence</div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
       {/* Footer */}
-      <footer id="footer" style={{ background: 'linear-gradient(135deg,rgb(31, 55, 111) 40%,rgb(76, 123, 195) 99%)', color: 'white', textAlign: 'center', padding: '2rem 0', marginTop: '0' }}>
+      <footer style={{ background: 'linear-gradient(135deg,rgb(31, 55, 111) 40%,rgb(76, 123, 195) 99%)', color: 'white', textAlign: 'center', padding: '2rem 0', marginTop: '0' }}>
         <div>© {new Date().getFullYear()} VetCare. All rights reserved.</div>
       </footer>
     </div>
