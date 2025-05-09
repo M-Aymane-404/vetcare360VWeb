@@ -206,7 +206,7 @@ const OwnerDetails = () => {
                               {new Date(pet.birthDate).toLocaleDateString()}
                             </span>
                           </div>
-                          <div>
+                          <div className="d-flex justify-content-end action-buttons">
                             <Button 
                               variant="outline-primary" 
                               size="sm" 
@@ -215,15 +215,6 @@ const OwnerDetails = () => {
                             >
                               <i className="fas fa-edit me-1"></i>
                               Modifier
-                            </Button>
-                            <Button 
-                              variant="outline-info" 
-                              size="sm" 
-                              onClick={() => navigate(`/pets/${pet._id}/visits/add`)}
-                              className="me-2"
-                            >
-                              <i className="fas fa-plus me-1"></i>
-                              Visite
                             </Button>
                             <Button 
                               variant="outline-danger" 
