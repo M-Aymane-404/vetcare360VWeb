@@ -14,17 +14,17 @@ const vets = [
 async function seedDatabase() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("✅ Connecté à MongoDB");
+    console.log(" Connecté à MongoDB");
 
     await Veterinarian.deleteMany({});
-    console.log("🧹 Données précédentes supprimées");
+    console.log(" Données précédentes supprimées");
 
     await Veterinarian.insertMany(vets);
-    console.log("✅ Vétérinaires ajoutés avec succès");
+    console.log(" Vétérinaires ajoutés avec succès");
 
     process.exit(0);
   } catch (err) {
-    console.error("❌ Erreur lors du seeding :", err.message);
+    console.error(" Erreur lors du seeding :", err.message);
     process.exit(1);
   }
 }

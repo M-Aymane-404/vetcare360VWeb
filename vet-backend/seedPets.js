@@ -15,10 +15,10 @@ async function seedPets() {
 
     await Pet.deleteMany();
     const result = await Pet.insertMany(pets);
-    console.log("🐶 Animaux insérés :", result.length);
+    console.log(" Animaux insérés :", result.length);
     process.exit(0);
   } catch (err) {
-    console.error("❌ Erreur seedPets:", err.message);
+    console.error(" Erreur seedPets:", err.message);
     process.exit(1);
   }
 }

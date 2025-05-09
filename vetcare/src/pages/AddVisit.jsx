@@ -9,20 +9,16 @@ const AddVisit = () => {
   const navigate = useNavigate();
   const [date, setDate] = useState('');
   const [description, setDescription] = useState('');
-  const [veterinarian, setVeterinarian] = useState('');
-  const [vets, setVets] = useState([]);
   const [pet, setPet] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Récupérer l'animal et les vétérinaires
+  // Récupérer l'animal
   useEffect(() => {
     const fetchData = async () => {
       try {
         const petRes = await axios.get(`http://localhost:5000/api/pets/${petId}`);
         setPet(petRes.data.data);
-        const vetsRes = await axios.get('http://localhost:5000/api/veterinarians');
-        setVets(vetsRes.data.data);
       } catch (err) {
         setError("Erreur lors du chargement des données");
       }
@@ -38,8 +34,7 @@ const AddVisit = () => {
       await axios.post('http://localhost:5000/api/visits', {
         pet: petId,
         date,
-        description,
-        veterinarian
+        description
       });
       // Récupérer l'ownerId pour la redirection
       const petRes = await axios.get(`http://localhost:5000/api/pets/${petId}`);
@@ -118,24 +113,6 @@ const AddVisit = () => {
                       className="form-control-lg"
                       placeholder="Détails de la visite..."
                     />
-                  </Form.Group>
-                  
-                  <Form.Group className="mb-4">
-                    <Form.Label className="fw-bold">
-                      <i className="fas fa-user-md me-2"></i>
-                      Vétérinaire
-                    </Form.Label>
-                    <Form.Select
-                      value={veterinarian}
-                      onChange={e => setVeterinarian(e.target.value)}
-                      required
-                      className="form-control-lg"
-                    >
-                      <option value="">Sélectionner un vétérinaire</option>
-                      {vets.map(vet => (
-                        <option key={vet._id} value={vet._id}>{vet.name}</option>
-                      ))}
-                    </Form.Select>
                   </Form.Group>
                   
                   <div className="d-flex gap-2 justify-content-end">

@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const visitSchema = new mongoose.Schema({
   date: { 
     type: Date, 
-    default: Date.now // <-- Default ajouté ici
+    default: Date.now
   },
   description: { 
     type: String, 

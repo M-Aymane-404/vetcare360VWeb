@@ -12,10 +12,10 @@ async function seedOwners() {
     await mongoose.connect(process.env.MONGO_URI);
     await Owner.deleteMany();
     const result = await Owner.insertMany(owners);
-    console.log("📦 Propriétaires insérés :", result.length);
+    console.log(" Propriétaires insérés :", result.length);
     process.exit(0);
   } catch (err) {
-    console.error("❌ Erreur seedOwners:", err.message);
+    console.error(" Erreur seedOwners:", err.message);
     process.exit(1);
   }
 }

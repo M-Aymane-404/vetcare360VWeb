@@ -25,7 +25,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Connexion MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    console.log("✅ Connecté à MongoDB");
+    console.log(" Connecté à MongoDB");
 
     // Routes
     app.use("/api/owners", require("./routes/ownerRoutes"));
@@ -39,10 +39,10 @@ mongoose.connect(process.env.MONGO_URI)
     // Démarrage serveur
     const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => {
-      console.log(`🚀 Serveur prêt sur http://localhost:${PORT}`);
+      console.log(`Serveur prêt sur http://localhost:${PORT}`);
     });
   })
   .catch(err => {
-    console.error("❌ Échec connexion MongoDB:", err.message);
+    console.error(" Échec connexion MongoDB:", err.message);
     process.exit(1);
   });

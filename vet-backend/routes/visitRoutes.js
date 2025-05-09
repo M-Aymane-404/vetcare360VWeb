@@ -13,8 +13,7 @@ router.post(
       .notEmpty().withMessage("La description est requise"),
     body("pet")
       .isMongoId().withMessage("ID de l'animal invalide")
-  ]
-  ,
+  ],
   async (req, res, next) => {
     try {
       // Validation des données
@@ -106,7 +105,6 @@ router.get("/pet/:petId",
     }
   }
 );
-
 
 // Lister toutes les visites (optionnel mais utile pour tester)
 router.get("/", async (req, res, next) => {

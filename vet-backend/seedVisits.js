@@ -18,7 +18,7 @@ async function seedVisits() {
     console.log("📅 Visites insérées :", result.length);
     process.exit(0);
   } catch (err) {
-    console.error("❌ Erreur seedVisits:", err.message);
+    console.error(" Erreur seedVisits:", err.message);
     process.exit(1);
   }
 }

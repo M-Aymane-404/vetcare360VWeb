@@ -244,9 +244,8 @@ const OwnerDetails = () => {
                             <Table hover bordered size="sm" className="visits-table">
                               <thead className="bg-light">
                                 <tr>
-                                  <th style={{width: "20%"}}>Date</th>
-                                  <th style={{width: "45%"}}>Description</th>
-                                  <th style={{width: "20%"}}>Vétérinaire</th>
+                                  <th style={{width: "30%"}}>Date</th>
+                                  <th style={{width: "55%"}}>Description</th>
                                   <th style={{width: "15%"}}>Actions</th>
                                 </tr>
                               </thead>
@@ -257,7 +256,6 @@ const OwnerDetails = () => {
                                     <tr key={visit._id}>
                                       <td>{visit.date ? new Date(visit.date).toLocaleDateString() : ''}</td>
                                       <td>{visit.description}</td>
-                                      <td>Dr. Dupont</td>
                                       <td>
                                         <Button 
                                           size="sm" 
