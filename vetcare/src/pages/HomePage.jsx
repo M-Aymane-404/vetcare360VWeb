@@ -37,10 +37,9 @@ const HomePage = () => {
           <Row className="align-items-center">
             <Col lg={6}>
               <div className="hero-content">
-                <h1 className="hero-title">Professional Care For Your Beloved Pets</h1>
+                <h1 className="hero-title">VetCare360 : Système de gestion intégré pour cliniques vétérinaires</h1>
                 <p className="hero-text">
-                  Trust us with your pet's health. Our experienced veterinarians provide
-                  comprehensive care with compassion and expertise.
+                Notre système permet un suivi précis des propriétaires, de leurs animaux de compagnie et de l'historique des consultations médicales, offrant aux professionnels vétérinaires un accès centralisé à toutes les informations essentielles pour une prise en charge optimale.
                 </p>
                 <div className="hero-buttons d-flex" style={{marginTop: '2rem'}}>
                   <Button 
