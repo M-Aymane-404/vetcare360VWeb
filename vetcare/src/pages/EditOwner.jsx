@@ -96,7 +96,6 @@ const EditOwner = () => {
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3">
                     <Form.Label className="fw-bold">
-                      <i className="fas fa-user me-2"></i>
                       Prénom
                     </Form.Label>
                     <Form.Control
@@ -111,7 +110,6 @@ const EditOwner = () => {
 
                   <Form.Group className="mb-3">
                     <Form.Label className="fw-bold">
-                      <i className="fas fa-user me-2"></i>
                       Nom
                     </Form.Label>
                     <Form.Control
@@ -126,7 +124,6 @@ const EditOwner = () => {
 
                   <Form.Group className="mb-3">
                     <Form.Label className="fw-bold">
-                      <i className="fas fa-map-marker-alt me-2"></i>
                       Adresse
                     </Form.Label>
                     <Form.Control
@@ -140,7 +137,6 @@ const EditOwner = () => {
 
                   <Form.Group className="mb-3">
                     <Form.Label className="fw-bold">
-                      <i className="fas fa-city me-2"></i>
                       Ville
                     </Form.Label>
                     <Form.Control
@@ -154,7 +150,6 @@ const EditOwner = () => {
 
                   <Form.Group className="mb-4">
                     <Form.Label className="fw-bold">
-                      <i className="fas fa-phone me-2"></i>
                       Téléphone
                     </Form.Label>
                     <Form.Control
@@ -197,7 +192,6 @@ const EditOwner = () => {
                         </>
                       ) : (
                         <>
-                          <i className="fas fa-save me-2"></i>
                           Enregistrer
                         </>
                       )}
