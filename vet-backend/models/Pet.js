@@ -1,4 +1,4 @@
-// models/Pet.js
+
 const mongoose = require("mongoose");
 
 const petSchema = new mongoose.Schema({
@@ -9,5 +9,4 @@ const petSchema = new mongoose.Schema({
   visits: [{ type: mongoose.Schema.Types.ObjectId, ref: "Visit" }]
 });
 
-// Exportez le modèle avec le nom EXACT "Pet"
-module.exports = mongoose.model("Pet", petSchema); // <-- Nom crucial !
+module.exports = mongoose.model("Pet", petSchema);
